@@ -603,7 +603,7 @@
     /* ── OFFER ───────────────────────────────────────────── */
     #offer {
       padding: 7rem 4rem;
-      background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.9)), url('images/slide7.jpeg') center/cover no-repeat;
+      background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.9)), url('images/slide7.jpg') center/cover no-repeat;
       position: relative;
       overflow: hidden;
     }
@@ -781,7 +781,7 @@
     }
 
     .audience-card.vendors {
-      background: var(--gold);
+      background: linear-gradient(rgba(249, 115, 22, 0.9), rgba(249, 115, 22, 0.9)), url('images/slide3.jpg') center/cover no-repeat;
       color: var(--deep);
     }
 
@@ -1147,223 +1147,86 @@
     }
 
     /* ── RESPONSIVE ──────────────────────────────────────── */
+    /* ── RESPONSIVE ──────────────────────────────────────── */
     @media(max-width:1100px) {
       #home {
         grid-template-columns: 1fr 1fr;
         padding: 7rem 2rem 4rem;
         gap: 2rem;
       }
-
-      .hero-card-main {
-        width: 260px;
-      }
-
-      #about {
-        padding: 5rem 2rem;
-        gap: 3rem;
-      }
-
-      #offer,
-      #howitworks,
-      #audience,
-      #testimonial,
-      #faq,
-      #cta {
-        padding: 5rem 2rem;
-      }
-
-      footer {
-        padding: 3rem 2rem 2rem;
-      }
+      .hero-card-main { width: 260px; }
+      #about { padding: 5rem 2rem; gap: 3rem; }
+      #offer, #howitworks, #audience, #testimonial, #faq, #cta { padding: 5rem 2rem; }
+      footer { padding: 3rem 2rem 2rem; }
     }
 
     @media(max-width:900px) {
       nav {
-        padding: 1rem 1.5rem;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
       }
-
-      .nav-links,
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.85rem;
+      }
       .nav-cta {
-        display: none;
+        display: inline-block;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
       }
 
       #home {
         grid-template-columns: 1fr;
-        padding: 6rem 1.5rem 3rem;
-        gap: 2rem;
+        padding: 8rem 1rem 3rem;
+        text-align: center;
       }
-
       .hero-visual {
         display: flex;
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: 2rem;
       }
-
       .hero-card-main {
         width: 100%;
-        max-width: 340px;
+        max-width: 360px;
         transform: rotate(0deg);
       }
+      .hero-card-float { display: block; position: static; margin-top: 1rem; }
 
-      .hero-card-float {
-        display: none;
-      }
-
-      #about,
-      .faq-wrap {
+      #about, .faq-wrap {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-
-      #offer,
-      #howitworks,
-      #audience,
-      #testimonial,
-      #faq,
-      #cta,
-      footer {
-        padding: 4rem 1.5rem;
+      #offer, #howitworks, #audience, #testimonial, #faq, #cta, footer {
+        padding: 4rem 1rem;
       }
-
-      .offer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .testi-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hiw-steps {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hiw-steps::before {
-        display: none;
-      }
-
-      .audience-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-stats {
-        gap: 1.5rem;
-      }
+      .offer-grid { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: repeat(2, 1fr); }
+      .hiw-steps { grid-template-columns: 1fr 1fr; }
+      .hiw-steps::before { display: none; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
     }
 
     @media(max-width:600px) {
-      nav {
-        padding: 0.9rem 1rem;
-      }
-
-      #home {
-        padding: 5rem 1rem 2.5rem;
-        gap: 2rem;
-      }
-
-      .hero-title {
-        font-size: clamp(2.2rem, 8vw, 3.5rem);
-      }
-
-      .hero-sub {
-        font-size: 0.95rem;
-      }
-
-      .hero-stats {
-        flex-direction: row;
+      .nav-links {
+        gap: 0.8rem;
         flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: center;
       }
-
-      .stat-item .num {
-        font-size: 1.4rem;
-      }
-
-      .store-badges {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-visual {
-        display: none;
-      }
-
-      /* hide on very small to keep layout clean */
-
-      #about,
-      .faq-wrap {
-        padding: 3rem 1rem;
-        gap: 2rem;
-      }
-
-      #offer,
-      #howitworks,
-      #audience,
-      #testimonial,
-      #faq,
-      #cta,
-      footer {
-        padding: 3rem 1rem;
-      }
-
-      .offer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .testi-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hiw-steps {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-      }
-
-      .audience-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .audience-card {
-        padding: 2rem 1.5rem;
-      }
-
-      .audience-card h3 {
-        font-size: 1.5rem;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-      }
-
-      .footer-bottom a {
-        margin-left: 0.8rem;
-      }
-
-      .section-title {
-        font-size: clamp(1.6rem, 6vw, 2.4rem);
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .step-card {
-        padding: 1.5rem 0.5rem;
-      }
+      .hero-title { font-size: 2.2rem; }
+      .hero-sub { font-size: 0.9rem; }
+      .hero-stats { flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+      
+      .offer-grid, .testi-grid, .hiw-steps { grid-template-columns: 1fr; }
+      
+      .audience-card { padding: 2rem 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+      .footer-brand { align-items: center; text-align: center; }
+      .footer-bottom { flex-direction: column; gap: 1rem; }
     }
 
     @media(max-width:420px) {
