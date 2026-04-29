@@ -1154,10 +1154,28 @@
         padding: 7rem 2rem 4rem;
         gap: 2rem;
       }
-      .hero-card-main { width: 260px; }
-      #about { padding: 5rem 2rem; gap: 3rem; }
-      #offer, #howitworks, #audience, #testimonial, #faq, #cta { padding: 5rem 2rem; }
-      footer { padding: 3rem 2rem 2rem; }
+
+      .hero-card-main {
+        width: 260px;
+      }
+
+      #about {
+        padding: 5rem 2rem;
+        gap: 3rem;
+      }
+
+      #offer,
+      #howitworks,
+      #audience,
+      #testimonial,
+      #faq,
+      #cta {
+        padding: 5rem 2rem;
+      }
+
+      footer {
+        padding: 3rem 2rem 2rem;
+      }
     }
 
     @media(max-width:900px) {
@@ -1167,11 +1185,13 @@
         gap: 1rem;
         height: auto;
       }
+
       .nav-links {
         display: flex;
         gap: 1.5rem;
         font-size: 0.85rem;
       }
+
       .nav-cta {
         display: inline-block;
         padding: 0.5rem 1.2rem;
@@ -1183,32 +1203,68 @@
         padding: 8rem 1rem 3rem;
         text-align: center;
       }
+
       .hero-visual {
         display: flex;
         justify-content: center;
         margin-top: 2rem;
       }
+
       .hero-card-main {
         width: 100%;
         max-width: 360px;
         transform: rotate(0deg);
       }
-      .hero-card-float { display: block; position: static; margin-top: 1rem; }
 
-      #about, .faq-wrap {
+      .hero-card-float {
+        display: block;
+        position: static;
+        margin-top: 1rem;
+      }
+
+      #about,
+      .faq-wrap {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-      #offer, #howitworks, #audience, #testimonial, #faq, #cta, footer {
+
+      #offer,
+      #howitworks,
+      #audience,
+      #testimonial,
+      #faq,
+      #cta,
+      footer {
         padding: 4rem 1rem;
       }
-      .offer-grid { grid-template-columns: repeat(2, 1fr); }
-      .testi-grid { grid-template-columns: repeat(2, 1fr); }
-      .hiw-steps { grid-template-columns: 1fr 1fr; }
-      .hiw-steps::before { display: none; }
-      .audience-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
+
+      .offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hiw-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hiw-steps::before {
+        display: none;
+      }
+
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media(max-width:600px) {
@@ -1217,16 +1273,46 @@
         flex-wrap: wrap;
         justify-content: center;
       }
-      .hero-title { font-size: 2.2rem; }
-      .hero-sub { font-size: 0.9rem; }
-      .hero-stats { flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
-      
-      .offer-grid, .testi-grid, .hiw-steps { grid-template-columns: 1fr; }
-      
-      .audience-card { padding: 2rem 1.5rem; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
-      .footer-brand { align-items: center; text-align: center; }
-      .footer-bottom { flex-direction: column; gap: 1rem; }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-sub {
+        font-size: 0.9rem;
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      .offer-grid,
+      .testi-grid,
+      .hiw-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .footer-brand {
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
 
     @media(max-width:420px) {
@@ -1264,7 +1350,8 @@
     <div class="hero-bg-circle c1"></div>
     <div class="hero-bg-circle c2"></div>
     <div class="hero-content reveal">
-      <div class="hero-tag"><span class="dot"></span> Soft Launching in <span id="timer" style="font-weight: 700; color: var(--terra);">00d 00h 00m 00s</span></div>
+      <div class="hero-tag"><span class="dot"></span> Soft Launching in <span id="timer"
+          style="font-weight: 700; color: var(--terra);">00d 00h 00m 00s</span></div>
       <h1 class="hero-title">
         Your market,<br>
         <em>delivered</em><br>
@@ -1301,8 +1388,9 @@
       </div>
     </div>
     <div class="hero-visual reveal">
-      <img src="images/slide6.jpeg" alt="StockedUp Mobile App" style="width: 100%; max-width: 450px; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.15); position: relative; z-index: 1;">
-      
+      <img src="images/slide6.jpeg" alt="StockedUp Mobile App"
+        style="width: 100%; max-width: 450px; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.15); position: relative; z-index: 1;">
+
       <div class="hero-card-float f1">
         <div class="float-row">
           <div class="avatar">AWKA</div>
@@ -1375,7 +1463,8 @@
       </div>
     </div>
     <div class="about-visual reveal" style="flex: 1; min-width: 300px;">
-      <img src="images/slide4.jpeg" alt="StockedUp Freshness" style="width: 100%; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
+      <img src="images/slide4.jpeg" alt="StockedUp Freshness"
+        style="width: 100%; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
     </div>
   </section>
 
@@ -1607,7 +1696,8 @@
       <div class="faq-list reveal">
         <div class="faq-item">
           <button class="faq-q">What is StockedUp? <span class="faq-toggle">+</span></button>
-          <div class="faq-a">StockedUp is an upcoming digital platform that connects foodstuff vendors with individuals
+          <div class="faq-a">StockedUp is an indigenous digital platform that connects foodstuff vendors with
+            individuals
             and families who want a faster, easier way to shop for groceries. Think of it as your local market — online,
             reliable, and delivered to your doorstep.</div>
         </div>
@@ -1623,7 +1713,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">Where will StockedUp be available? <span class="faq-toggle">+</span></button>
-          <div class="faq-a">We're starting with selected cities in Anambra State and expanding to more cities soon
+          <div class="faq-a">We're starting with Awka and its environs, and expanding to more cities soon
             after launch.</div>
         </div>
         <div class="faq-item">
@@ -1651,7 +1741,7 @@
     <span class="section-tag reveal">Get early access</span>
     <h2 class="section-title reveal">We are almost<br><em>live</em></h2>
     <p class="section-body reveal">The StockedUp app is ready. While we prepare our official Play Store and Apple Store
-      releases for our May 4th Soft Launch, you can contact customer care for early APK access.</p>
+      releases for our public launch, you can contact customer care for early APK access for May 4th (Soft Launch).</p>
 
     <div class="store-badges reveal" style="justify-content: center; margin-top: 2rem;">
       <a href="mailto:hello@stockedup.africa" class="store-badge">
@@ -1676,7 +1766,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="images/logo1.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
-        <p>Bringing the Nigerian market to your door — convenient, reliable, and always fresh.</p>
+        <p>Bringing the local food market to your door — convenient, reliable, and always fresh.</p>
       </div>
       <div class="footer-col">
         <h5>Categories</h5>
