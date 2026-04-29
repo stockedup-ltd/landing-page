@@ -34,13 +34,13 @@
 
     :root {
       --cream: #FFFFFF;
-      --deep: #111827;
+      --deep: #111111;
       --terra: #F97316;
-      --gold: #2D8A4E;
-      --sage: #22C55E;
-      --warm: #FFF7F2;
-      --dark-text: #111827;
-      --mid: #5A6B5F;
+      --gold: #F97316;
+      --sage: #F97316;
+      --warm: #FFF5EE;
+      --dark-text: #111111;
+      --mid: #555555;
     }
 
     html {
@@ -437,7 +437,7 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: var(--sage);
+      background: var(--terra);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -459,8 +459,8 @@
     }
 
     .delivery-pill {
-      background: #EDFAF2;
-      color: #1A7A42;
+      background: rgba(249,115,22,0.12);
+      color: var(--terra);
       padding: 0.4rem 0.9rem;
       border-radius: 100px;
       font-size: 0.75rem;
@@ -547,7 +547,7 @@
 
     .section-title em {
       font-style: italic;
-      color: var(--sage);
+      color: var(--terra);
     }
 
     .section-body {
@@ -783,13 +783,13 @@
     }
 
     .audience-card.buyers {
-      background: var(--sage);
+      background: var(--terra);
       color: var(--cream);
     }
 
     .audience-card.vendors {
-      background: var(--gold);
-      color: var(--deep);
+      background: var(--deep);
+      color: var(--cream);
     }
 
     .audience-card .aud-tag {
@@ -805,7 +805,8 @@
     }
 
     .audience-card.vendors .aud-tag {
-      background: rgba(17, 24, 39, 0.15);
+      background: rgba(249,115,22,0.2);
+      color: var(--terra);
     }
 
     .audience-card h3 {
@@ -831,7 +832,7 @@
     }
 
     .audience-card.vendors ul li {
-      border-bottom-color: rgba(17, 24, 39, 0.1);
+      border-bottom-color: rgba(255,255,255,0.1);
     }
 
     .audience-card ul li::before {
@@ -891,7 +892,7 @@
     }
 
     .stars {
-      color: var(--gold);
+      color: var(--terra);
       font-size: 0.9rem;
       margin-bottom: 1rem;
       letter-spacing: 2px;
@@ -1152,66 +1153,98 @@
       transform: none;
     }
 
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media(max-width:1100px) {
+      #home {
+        grid-template-columns: 1fr 1fr;
+        padding: 7rem 2rem 4rem;
+        gap: 2rem;
+      }
+      .hero-card-main { width: 260px; }
+      #about { padding: 5rem 2rem; gap: 3rem; }
+      #offer, #howitworks, #audience, #testimonial, #faq, #cta { padding: 5rem 2rem; }
+      footer { padding: 3rem 2rem 2rem; }
+    }
+
     @media(max-width:900px) {
       nav {
         padding: 1rem 1.5rem;
       }
-
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
+      .nav-links, .nav-cta { display: none; }
 
       #home {
         grid-template-columns: 1fr;
         padding: 6rem 1.5rem 3rem;
         gap: 2rem;
       }
-
       .hero-visual {
-        display: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
       }
+      .hero-card-main {
+        width: 100%;
+        max-width: 340px;
+        transform: rotate(0deg);
+      }
+      .hero-card-float { display: none; }
 
-      #about,
-      .faq-wrap {
+      #about, .faq-wrap {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-
-      #offer,
-      #howitworks,
-      #audience,
-      #testimonial,
-      #faq,
-      #cta,
-      footer {
+      #offer, #howitworks, #audience, #testimonial, #faq, #cta, footer {
         padding: 4rem 1.5rem;
       }
+      .offer-grid { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: repeat(2, 1fr); }
+      .hiw-steps { grid-template-columns: 1fr 1fr; }
+      .hiw-steps::before { display: none; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
 
-      .offer-grid,
-      .testi-grid {
-        grid-template-columns: 1fr;
-      }
+    @media(max-width:600px) {
+      nav { padding: 0.9rem 1rem; }
 
-      .hiw-steps {
-        grid-template-columns: 1fr 1fr;
+      #home {
+        padding: 5rem 1rem 2.5rem;
+        gap: 2rem;
       }
+      .hero-title { font-size: clamp(2.2rem,8vw,3.5rem); }
+      .hero-sub { font-size: 0.95rem; }
+      .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
+      .stat-item .num { font-size: 1.4rem; }
 
-      .hiw-steps::before {
-        display: none;
-      }
+      .store-badges { flex-direction: column; align-items: flex-start; }
 
-      .audience-grid {
-        grid-template-columns: 1fr;
-      }
+      .hero-visual { display: none; } /* hide on very small to keep layout clean */
 
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      #about, .faq-wrap { padding: 3rem 1rem; gap: 2rem; }
+      #offer, #howitworks, #audience, #testimonial, #faq, #cta, footer { padding: 3rem 1rem; }
 
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
+      .offer-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .hiw-steps { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .audience-card { padding: 2rem 1.5rem; }
+      .audience-card h3 { font-size: 1.5rem; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .footer-bottom a { margin-left: 0.8rem; }
+
+      .section-title { font-size: clamp(1.6rem,6vw,2.4rem); }
+      .about-grid { grid-template-columns: 1fr; }
+      .step-card { padding: 1.5rem 0.5rem; }
+    }
+
+    @media(max-width:420px) {
+      .hiw-steps { grid-template-columns: 1fr; }
+      nav img { height: 30px; }
+      .hero-title { font-size: 2rem; }
     }
   </style>
 </head>
