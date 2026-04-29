@@ -125,6 +125,7 @@
       overflow: hidden;
       gap: 3rem;
       align-items: center;
+      background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('images/slide1.jpg') center/cover no-repeat;
     }
 
     .hero-bg-circle {
@@ -451,7 +452,7 @@
     }
 
     .delivery-pill {
-      background: rgba(249,115,22,0.1);
+      background: rgba(249, 115, 22, 0.1);
       color: #F97316;
       padding: 0.4rem 0.9rem;
       border-radius: 100px;
@@ -1030,10 +1031,11 @@
     /* ── CTA BAND ────────────────────────────────────────── */
     #cta {
       padding: 7rem 4rem;
-      background: var(--deep);
+      background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85)), url('images/slide5.jpeg') center/cover no-repeat;
       text-align: center;
       position: relative;
       overflow: hidden;
+      color: #fff;
     }
 
     .cta-deco {
@@ -1151,91 +1153,231 @@
         padding: 7rem 2rem 4rem;
         gap: 2rem;
       }
-      .hero-card-main { width: 260px; }
-      #about { padding: 5rem 2rem; gap: 3rem; }
-      #offer, #howitworks, #audience, #testimonial, #faq, #cta { padding: 5rem 2rem; }
-      footer { padding: 3rem 2rem 2rem; }
+
+      .hero-card-main {
+        width: 260px;
+      }
+
+      #about {
+        padding: 5rem 2rem;
+        gap: 3rem;
+      }
+
+      #offer,
+      #howitworks,
+      #audience,
+      #testimonial,
+      #faq,
+      #cta {
+        padding: 5rem 2rem;
+      }
+
+      footer {
+        padding: 3rem 2rem 2rem;
+      }
     }
 
     @media(max-width:900px) {
       nav {
         padding: 1rem 1.5rem;
       }
-      .nav-links, .nav-cta { display: none; }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
 
       #home {
         grid-template-columns: 1fr;
         padding: 6rem 1.5rem 3rem;
         gap: 2rem;
       }
+
       .hero-visual {
         display: flex;
         justify-content: center;
         margin-top: 1rem;
       }
+
       .hero-card-main {
         width: 100%;
         max-width: 340px;
         transform: rotate(0deg);
       }
-      .hero-card-float { display: none; }
 
-      #about, .faq-wrap {
+      .hero-card-float {
+        display: none;
+      }
+
+      #about,
+      .faq-wrap {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-      #offer, #howitworks, #audience, #testimonial, #faq, #cta, footer {
+
+      #offer,
+      #howitworks,
+      #audience,
+      #testimonial,
+      #faq,
+      #cta,
+      footer {
         padding: 4rem 1.5rem;
       }
-      .offer-grid { grid-template-columns: repeat(2, 1fr); }
-      .testi-grid { grid-template-columns: repeat(2, 1fr); }
-      .hiw-steps { grid-template-columns: 1fr 1fr; }
-      .hiw-steps::before { display: none; }
-      .audience-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
-      .hero-stats { gap: 1.5rem; }
+
+      .offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hiw-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hiw-steps::before {
+        display: none;
+      }
+
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        gap: 1.5rem;
+      }
     }
 
     @media(max-width:600px) {
-      nav { padding: 0.9rem 1rem; }
+      nav {
+        padding: 0.9rem 1rem;
+      }
 
       #home {
         padding: 5rem 1rem 2.5rem;
         gap: 2rem;
       }
-      .hero-title { font-size: clamp(2.2rem, 8vw, 3.5rem); }
-      .hero-sub { font-size: 0.95rem; }
-      .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
-      .stat-item .num { font-size: 1.4rem; }
 
-      .store-badges { flex-direction: column; align-items: flex-start; }
+      .hero-title {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+      }
 
-      .hero-visual { display: none; } /* hide on very small to keep layout clean */
+      .hero-sub {
+        font-size: 0.95rem;
+      }
 
-      #about, .faq-wrap { padding: 3rem 1rem; gap: 2rem; }
-      #offer, #howitworks, #audience, #testimonial, #faq, #cta, footer { padding: 3rem 1rem; }
+      .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
 
-      .offer-grid { grid-template-columns: 1fr; }
-      .testi-grid { grid-template-columns: 1fr; }
-      .hiw-steps { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-      .audience-grid { grid-template-columns: 1fr; }
-      .audience-card { padding: 2rem 1.5rem; }
-      .audience-card h3 { font-size: 1.5rem; }
+      .stat-item .num {
+        font-size: 1.4rem;
+      }
 
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-      .footer-bottom a { margin-left: 0.8rem; }
+      .store-badges {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-      .section-title { font-size: clamp(1.6rem, 6vw, 2.4rem); }
-      .about-grid { grid-template-columns: 1fr; }
-      .step-card { padding: 1.5rem 0.5rem; }
+      .hero-visual {
+        display: none;
+      }
+
+      /* hide on very small to keep layout clean */
+
+      #about,
+      .faq-wrap {
+        padding: 3rem 1rem;
+        gap: 2rem;
+      }
+
+      #offer,
+      #howitworks,
+      #audience,
+      #testimonial,
+      #faq,
+      #cta,
+      footer {
+        padding: 3rem 1rem;
+      }
+
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hiw-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .audience-card h3 {
+        font-size: 1.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .footer-bottom a {
+        margin-left: 0.8rem;
+      }
+
+      .section-title {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step-card {
+        padding: 1.5rem 0.5rem;
+      }
     }
 
     @media(max-width:420px) {
-      .hiw-steps { grid-template-columns: 1fr; }
-      nav img { height: 30px; }
-      .hero-title { font-size: 2rem; }
+      .hiw-steps {
+        grid-template-columns: 1fr;
+      }
+
+      nav img {
+        height: 30px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -1296,23 +1438,14 @@
       </div>
     </div>
     <div class="hero-visual reveal">
-      <div class="hero-card-main">
-        <div class="card-icon">🛒</div>
-        <h3>Your weekly groceries, sorted.</h3>
-        <p>Rice, tomatoes, fresh veggies, grains — all from your nearest trusted vendor.</p>
-        <div class="card-tags">
-          <span>🌿 Fresh veggies</span>
-          <span>🌾 Grains</span>
-          <span>🥫 Canned foods</span>
-          <span>🍞 Bakery</span>
-        </div>
-      </div>
+      <img src="images/slide6.jpeg" alt="StockedUp Mobile App" style="width: 100%; max-width: 450px; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.15); position: relative; z-index: 1;">
+      
       <div class="hero-card-float f1">
         <div class="float-row">
           <div class="avatar">AWKA</div>
           <div class="info">
             <div class="name">
-              <div id="ORD-33E4ABA9"></div> ORD-33E4ABA9 placed
+              <div id="ORD-D11062AE"></div> ORD-D11062AE placed
             </div>
             <div class="sub">Just now · unizik junction</div>
           </div>
@@ -1347,34 +1480,39 @@
   </div>
 
   <!-- ABOUT -->
-  <section id="about">
-    <div class="reveal">
-      <span class="section-tag">Who we are</span>
-      <h2 class="section-title">Bridging buyers<br>and <em>trusted vendors</em></h2>
-      <p class="section-body">StockedUp removes the friction between you and your weekly groceries. We connect you to
-        vetted local vendors — no haggling, no market stress, no wasted time.</p>
+  <section id="about" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
+    <div style="flex: 1; min-width: 300px;">
+      <div class="reveal">
+        <span class="section-tag">Who we are</span>
+        <h2 class="section-title">Bridging buyers<br>and <em>trusted vendors</em></h2>
+        <p class="section-body">StockedUp removes the friction between you and your weekly groceries. We connect you to
+          vetted local vendors — no haggling, no market stress, no wasted time.</p>
+      </div>
+      <div class="about-grid reveal" style="margin-top: 2rem;">
+        <div class="about-card accent">
+          <div class="about-icon">⚡</div>
+          <h4>Built for speed</h4>
+          <p>From browsing to doorstep — the fastest grocery experience in your city.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🤝</div>
+          <h4>Vetted vendors</h4>
+          <p>Every vendor on our platform is screened for quality and reliability.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">📍</div>
+          <h4>Local first</h4>
+          <p>We support local market sellers while making their produce accessible to everyone.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🎁</div>
+          <h4>Loyalty rewards</h4>
+          <p>Earn points on every order and refer friends for extra bonuses.</p>
+        </div>
+      </div>
     </div>
-    <div class="about-grid reveal">
-      <div class="about-card accent">
-        <div class="about-icon">⚡</div>
-        <h4>Built for speed</h4>
-        <p>From browsing to doorstep — the fastest grocery experience in your city.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-icon">🤝</div>
-        <h4>Vetted vendors</h4>
-        <p>Every vendor on our platform is screened for quality and reliability.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-icon">📍</div>
-        <h4>Local first</h4>
-        <p>We support local market sellers while making their produce accessible to everyone.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-icon">🎁</div>
-        <h4>Loyalty rewards</h4>
-        <p>Earn points on every order and refer friends for extra bonuses.</p>
-      </div>
+    <div class="about-visual reveal" style="flex: 1; min-width: 300px;">
+      <img src="images/slide4.jpeg" alt="StockedUp Freshness" style="width: 100%; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
     </div>
   </section>
 
@@ -1728,4 +1866,3 @@
 </body>
 
 </html>
-
