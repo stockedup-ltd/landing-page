@@ -603,7 +603,7 @@
     /* ── OFFER ───────────────────────────────────────────── */
     #offer {
       padding: 7rem 4rem;
-      background: var(--deep);
+      background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.9)), url('images/slide7.jpeg') center/cover no-repeat;
       position: relative;
       overflow: hidden;
     }
@@ -776,7 +776,7 @@
     }
 
     .audience-card.buyers {
-      background: var(--sage);
+      background: linear-gradient(rgba(249, 115, 22, 0.85), rgba(249, 115, 22, 0.85)), url('images/slide4.jpeg') center/cover no-repeat;
       color: var(--cream);
     }
 
@@ -852,7 +852,7 @@
     /* ── TESTIMONIALS ────────────────────────────────────── */
     #testimonial {
       padding: 7rem 4rem;
-      background: var(--warm);
+      background: linear-gradient(rgba(255, 245, 238, 0.9), rgba(255, 245, 238, 0.9)), url('images/slide2.jpg') center/cover no-repeat;
     }
 
     .testi-header {
@@ -1401,7 +1401,7 @@
     <div class="hero-bg-circle c1"></div>
     <div class="hero-bg-circle c2"></div>
     <div class="hero-content reveal">
-      <div class="hero-tag"><span class="dot"></span> Soft Launching May 4th</div>
+      <div class="hero-tag"><span class="dot"></span> Soft Launching in <span id="timer" style="font-weight: 700; color: var(--terra);">00d 00h 00m 00s</span></div>
       <h1 class="hero-title">
         Your market,<br>
         <em>delivered</em><br>
@@ -1847,6 +1847,30 @@
   </footer>
 
   <script>
+    // Countdown Timer
+    const countdownDate = new Date("May 4, 2026 00:00:00").getTime();
+    const timerElement = document.getElementById("timer");
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance < 0) {
+        timerElement.innerHTML = "LIVE NOW!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
