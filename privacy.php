@@ -127,7 +127,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index.php" style="text-decoration:none;"><img src="images/logo.png" alt="StockedUp Logo" style="height: 40px; width: auto;" /></a>
+  <a href="index.php" style="text-decoration:none;"><img src="images/logo1.png" alt="StockedUp Logo" style="height: 40px; width: auto;" /></a>
   <ul class="nav-links">
     <li><a href="index.php#about">About</a></li>
     <li><a href="index.php#offer">Offer</a></li>
@@ -198,7 +198,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="images/logo.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
+      <img src="images/logo1.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
       <p>Bringing the Nigerian market to your door — convenient, reliable, and always fresh.</p>
     </div>
     <div class="footer-col">
