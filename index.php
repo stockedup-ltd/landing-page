@@ -6,14 +6,6 @@
 <html lang="en">
 
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9KHXJNX4J"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-M9KHXJNX4J');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StockedUp | Bringing the Market to Your Door</title>
@@ -152,7 +144,7 @@
     .hero-bg-circle.c2 {
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(45, 138, 78, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
       bottom: 0;
       left: 200px;
     }
@@ -437,7 +429,7 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: var(--terra);
+      background: var(--sage);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -459,8 +451,8 @@
     }
 
     .delivery-pill {
-      background: rgba(249,115,22,0.12);
-      color: var(--terra);
+      background: rgba(249,115,22,0.1);
+      color: #F97316;
       padding: 0.4rem 0.9rem;
       border-radius: 100px;
       font-size: 0.75rem;
@@ -547,7 +539,7 @@
 
     .section-title em {
       font-style: italic;
-      color: var(--terra);
+      color: var(--sage);
     }
 
     .section-body {
@@ -783,13 +775,13 @@
     }
 
     .audience-card.buyers {
-      background: var(--terra);
+      background: var(--sage);
       color: var(--cream);
     }
 
     .audience-card.vendors {
-      background: var(--deep);
-      color: var(--cream);
+      background: var(--gold);
+      color: var(--deep);
     }
 
     .audience-card .aud-tag {
@@ -805,8 +797,7 @@
     }
 
     .audience-card.vendors .aud-tag {
-      background: rgba(249,115,22,0.2);
-      color: var(--terra);
+      background: rgba(17, 24, 39, 0.15);
     }
 
     .audience-card h3 {
@@ -832,7 +823,7 @@
     }
 
     .audience-card.vendors ul li {
-      border-bottom-color: rgba(255,255,255,0.1);
+      border-bottom-color: rgba(17, 24, 39, 0.1);
     }
 
     .audience-card ul li::before {
@@ -892,7 +883,7 @@
     }
 
     .stars {
-      color: var(--terra);
+      color: var(--gold);
       font-size: 0.9rem;
       margin-bottom: 1rem;
       letter-spacing: 2px;
@@ -1213,7 +1204,7 @@
         padding: 5rem 1rem 2.5rem;
         gap: 2rem;
       }
-      .hero-title { font-size: clamp(2.2rem,8vw,3.5rem); }
+      .hero-title { font-size: clamp(2.2rem, 8vw, 3.5rem); }
       .hero-sub { font-size: 0.95rem; }
       .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
       .stat-item .num { font-size: 1.4rem; }
@@ -1236,7 +1227,7 @@
       .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
       .footer-bottom a { margin-left: 0.8rem; }
 
-      .section-title { font-size: clamp(1.6rem,6vw,2.4rem); }
+      .section-title { font-size: clamp(1.6rem, 6vw, 2.4rem); }
       .about-grid { grid-template-columns: 1fr; }
       .step-card { padding: 1.5rem 0.5rem; }
     }
@@ -1253,7 +1244,7 @@
 
   <!-- NAV -->
   <nav>
-    <img src="images/logo.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
+    <img src="images/logo1.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#offer">Offer</a></li>
@@ -1300,8 +1291,8 @@
 
       <div class="hero-stats">
         <div class="stat-item"><span class="num">500+</span><span class="label">Early signups</span></div>
-        <div class="stat-item"><span class="num">30+</span><span class="label">Trusted vendors</span></div>
-        <div class="stat-item"><span class="num">2hrs</span><span class="label">Avg delivery</span></div>
+        <div class="stat-item"><span class="num">10+</span><span class="label">Trusted vendors</span></div>
+        <div class="stat-item"><span class="num">1hr</span><span class="label">Avg delivery</span></div>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -1318,10 +1309,12 @@
       </div>
       <div class="hero-card-float f1">
         <div class="float-row">
-          <div class="avatar">NG</div>
+          <div class="avatar">AWKA</div>
           <div class="info">
-            <div class="name">Order #4421 placed</div>
-            <div class="sub">Just now · Awka Central</div>
+            <div class="name">
+              <div id="ORD-33E4ABA9"></div> ORD-33E4ABA9 placed
+            </div>
+            <div class="sub">Just now · unizik junction</div>
           </div>
         </div>
       </div>
@@ -1535,7 +1528,9 @@
       </div>
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"As a trader in Eke-Awka market, I was sceptical at first. But the StockedUp team came personally to verify my stand and explained the whole thing. Now I'm reaching customers in Amawbia and Nnewi that I've never sold to before. My daily turnover has improved already."</p>
+        <p class="testi-text">"As a trader in Eke-Awka market, I was sceptical at first. But the StockedUp team came
+          personally to verify my stand and explained the whole thing. Now I'm reaching customers in Amawbia and Nnewi
+          that I've never sold to before. My daily turnover has improved already."</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--sage);">EO</div>
           <div>
@@ -1546,7 +1541,9 @@
       </div>
       <div class="testi-card featured reveal">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"I'm a mum of three in Okpuno and the market is far from us. StockedUp beta has been a lifesaver — I ordered ugu leaves, crayfish, and garri last week and it came within hours. The packaging was clean and fresh. Very impressed with the professionalism."</p>
+        <p class="testi-text">"I'm a mum of three in Okpuno and the market is far from us. StockedUp beta has been a
+          lifesaver — I ordered ugu leaves, crayfish, and garri last week and it came within hours. The packaging was
+          clean and fresh. Very impressed with the professionalism."</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:rgba(255,255,255,0.25); color:var(--cream);">CN</div>
           <div>
@@ -1557,7 +1554,9 @@
       </div>
       <div class="testi-card reveal">
         <div class="stars">★★★★☆</div>
-        <p class="testi-text">"I live near UNIZIK and I order for my hostel almost every week now. The prices are fair — same as market price — and the delivery guys are always polite. Better than going to Eke-Awka and bargaining under the sun. I've referred five friends already."</p>
+        <p class="testi-text">"I live near UNIZIK and I order for my hostel almost every week now. The prices are fair —
+          same as market price — and the delivery guys are always polite. Better than going to Eke-Awka and bargaining
+          under the sun. I've referred five friends already."</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--terra);">CA</div>
           <div>
@@ -1568,7 +1567,9 @@
       </div>
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"I sell fresh tomatoes and pepper around Aroma junction. StockedUp gave me a dashboard to list my stock and manage orders — something I never thought I'd have. It's simple enough that even my sister who isn't tech-savvy uses it. Waiting eagerly for the full launch."</p>
+        <p class="testi-text">"I sell fresh tomatoes and pepper around Aroma junction. StockedUp gave me a dashboard to
+          list my stock and manage orders — something I never thought I'd have. It's simple enough that even my sister
+          who isn't tech-savvy uses it. Waiting eagerly for the full launch."</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--sage);">NE</div>
           <div>
@@ -1579,7 +1580,9 @@
       </div>
       <div class="testi-card featured reveal">
         <div class="stars">★★★★★</div>
-        <p class="testi-text">"My farm is in Nibo but most of my customers are in Awka proper. StockedUp handles delivery for me — I just harvest, list, and pack. The coordination is smooth and I finally have a business that feels organised. Very proud to be one of their first vendor partners."</p>
+        <p class="testi-text">"My farm is in Nibo but most of my customers are in Awka proper. StockedUp handles
+          delivery for me — I just harvest, list, and pack. The coordination is smooth and I finally have a business
+          that feels organised. Very proud to be one of their first vendor partners."</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:rgba(255,255,255,0.25); color:var(--cream);">IE</div>
           <div>
@@ -1671,7 +1674,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
+        <img src="images/logo1.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
         <p>Bringing the Nigerian market to your door — convenient, reliable, and always fresh.</p>
       </div>
       <div class="footer-col">
@@ -1725,3 +1728,4 @@
 </body>
 
 </html>
+
