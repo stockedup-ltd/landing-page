@@ -1795,7 +1795,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="images/logo1.png" alt="StockedUp Logo" style="height: 40px; width: auto;" />
-        <p>Bringing the local food market to your door — convenient, reliable, and always fresh.</p>
+        <p>Bringing the local food market to your door. FRESH. FAST. RELIABLE</p>
       </div>
       <div class="footer-col">
         <h5>Categories</h5>
