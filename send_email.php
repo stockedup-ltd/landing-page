@@ -72,22 +72,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message .= "\nReferral Source: $referral_source\n";
         $message .= "Submitted on: " . date('Y-m-d H:i:s') . "\n";
 
+        // Load configuration
+        $config = require 'config.php';
+
         // Create PHPMailer instance
         $mail = new PHPMailer(true);
 
-        // Use built-in mail() function
-        $mail->isMail(); // or configure SMTP below
+        // SMTP Configuration
+        $mail->isSMTP();
+        $mail->Host       = $config['smtp']['host'];
+        $mail->SMTPAuth   = $config['smtp']['auth'];
+        $mail->Username   = $config['smtp']['username'];
+        $mail->Password   = $config['smtp']['password'];
+        $mail->SMTPSecure = $config['smtp']['secure'];
+        $mail->Port       = $config['smtp']['port'];
 
-         /*$mail->isSMTP();
-         $mail->Host = 'smtp.gmail.com';
-         $mail->SMTPAuth = true;
-         $mail->Username = 'REMOVED_EMAIL@example.com';
-         $mail->Password = 'REMOVED_PASSWORD';
-         $mail->SMTPSecure = 'tls';
-         $mail->Port = 587;*/
-
-        $mail->setFrom('no-reply@stockedup.com', 'StockedUp Waitlist');
-        $mail->addAddress('REMOVED_EMAIL@example.com');
+        $mail->setFrom($config['email']['from_email'], $config['email']['from_name']);
+        $mail->addAddress($config['email']['admin_address']);
         $mail->addReplyTo($email, $full_name);
 
         $mail->Subject = 'New Waitlist Submission';
