@@ -1586,6 +1586,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#offer">Offer</a></li>
       <li><a href="#howitworks">How it works</a></li>
+      <li><a href="#founder-message">Founder</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <a href="mailto:hello@stockedup.africa" class="nav-cta">Contact Us</a>
@@ -1955,7 +1956,7 @@
       <span class="section-tag">A Message from the Founder 👋</span>
       <h2>Hi, I'm Henry, <br>founder of <em>StockedUp.</em></h2>
 
-      <p>Today is a special day for us. We officially launched, and we've already seen our very first real customer
+      <p>May 4th, is a special day for us. We officially launched, and we've already seen our very first real customer
         place an order. That moment reminded me why we started building StockedUp in the first place — to make buying
         food and groceries easier, faster, and stress-free.</p>
 
