@@ -1991,7 +1991,8 @@
         <span class="section-tag">FAQ</span>
         <h2 class="section-title">Got<br>questions?<br><em>We've got<br>answers.</em></h2>
         <p class="section-body" style="margin-top:1rem;">Everything you need to know before StockedUp goes live.</p>
-        <a href="mailto:hello@stockedup.africa" class="btn-primary" style="margin-top:2rem;">Contact Customer Care →</a>
+        <a href="https://wa.me/2348104436235" target="_blank" class="btn-primary" style="margin-top:2rem;">Contact
+          Customer Care →</a>
       </div>
       <div class="faq-list reveal">
         <div class="faq-item">
@@ -2028,7 +2029,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">How can I contact the team? <span class="faq-toggle">+</span></button>
-          <div class="faq-a">Email us at hello@stockedup.africa or reach out via our official social media pages. We
+          <div class="faq-a">Email us at support@stockedup.africa or reach out via our official social media pages. We
             respond to every message.</div>
         </div>
       </div>
@@ -2039,7 +2040,7 @@
   <section id="cta">
     <div class="cta-deco"></div>
     <span class="section-tag reveal">Get early access</span>
-    <h2 class="section-title reveal">We are almost<br><em>live</em></h2>
+    <h2 class="section-title reveal">We are<br><em>live</em></h2>
     <p class="section-body reveal">The StockedUp app is ready. While we prepare our official Play Store and Apple Store
       releases for our public launch, you can download the early access Android APK right here and start shopping today.
     </p>
