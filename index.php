@@ -944,6 +944,102 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
+    /* ── FOUNDER MESSAGE ─────────────────────────────────── */
+    #founder-message {
+      padding: 7rem 4rem;
+      background: var(--warm);
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .founder-image {
+      position: relative;
+    }
+
+    .founder-image img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    .founder-image::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
+      background: rgba(249, 115, 22, 0.1);
+      border-radius: 24px;
+      z-index: 1;
+    }
+
+    .founder-content h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: var(--deep);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .founder-content h2 em {
+      color: var(--terra);
+      font-style: italic;
+    }
+
+    .founder-content p {
+      font-size: 1rem;
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .founder-content ul {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+
+    .founder-content ul li {
+      position: relative;
+      padding-left: 1.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      color: var(--deep);
+      font-weight: 500;
+    }
+
+    .founder-content ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--terra);
+      font-weight: 700;
+    }
+
+    .founder-signature {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(17, 24, 39, 0.1);
+    }
+
+    .founder-signature strong {
+      display: block;
+      color: var(--deep);
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .founder-signature span {
+      color: var(--mid);
+      font-size: 0.85rem;
+    }
+
     /* ── FAQ ─────────────────────────────────────────────── */
     #faq {
       padding: 7rem 4rem;
@@ -1197,6 +1293,7 @@
       #howitworks,
       #audience,
       #testimonial,
+      #founder-message,
       #faq,
       #cta {
         padding: 5rem 2rem;
@@ -1252,15 +1349,22 @@
       }
 
       #about,
+      #founder-message,
       .faq-wrap {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+      }
+
+      #founder-message .founder-image::before {
+        top: 20px;
+        left: 20px;
       }
 
       #offer,
       #howitworks,
       #audience,
       #testimonial,
+      #founder-message,
       #faq,
       #cta,
       footer {
@@ -1357,6 +1461,119 @@
         font-size: 2rem;
       }
     }
+
+    /* ── MODAL ───────────────────────────────────────────── */
+    .apk-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .apk-modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .apk-modal-content {
+      background: #fff;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .apk-modal-overlay.active .apk-modal-content {
+      transform: translateY(0);
+    }
+
+    .apk-modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(17, 24, 39, 0.05);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--mid);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .apk-modal-close:hover {
+      background: rgba(17, 24, 39, 0.1);
+      color: var(--deep);
+    }
+
+    .apk-modal-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .apk-modal-content h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--deep);
+      margin-bottom: 1rem;
+    }
+
+    .apk-modal-content p {
+      font-size: 0.95rem;
+      color: var(--mid);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .apk-modal-content .highlight-box {
+      background: rgba(249, 115, 22, 0.08);
+      border-left: 3px solid var(--terra);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: left;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+      color: var(--deep);
+    }
+
+    .apk-modal-btn {
+      display: inline-block;
+      width: 100%;
+      background: var(--terra);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .apk-modal-btn:hover {
+      background: #e06512;
+    }
   </style>
 </head>
 
@@ -1390,7 +1607,23 @@
         groceries, zero market stress.</p>
 
       <div class="hero-actions">
-        <div class="store-badges">
+        <div class="store-badges" style="flex-wrap: wrap; gap: 1rem;">
+          <a href="https://stockedup.africa/download/StockedUp-Africa.apk" class="store-badge"
+            id="apk-download-btn-hero" download>
+            <i class="fab fa-android"></i>
+            <div class="text">
+              <small>Get early access</small>
+              <span>Download Android</span>
+            </div>
+          </a>
+          <a href="https://whatsapp.com/channel/0029Vb6XFXT3GJOyEaxnwk1v" target="_blank" class="store-badge"
+            style="background: #25D366; border-color: #25D366; color: #fff;">
+            <i class="fab fa-whatsapp" style="font-size: 1.8rem;"></i>
+            <div class="text">
+              <small>Updates & Bonuses</small>
+              <span>Join WhatsApp</span>
+            </div>
+          </a>
           <a href="#cta" class="store-badge">
             <i class="fab fa-google-play"></i>
             <div class="text">
@@ -1713,6 +1946,43 @@
     </div>
   </section>
 
+  <!-- FOUNDER MESSAGE -->
+  <section id="founder-message">
+    <div class="founder-image reveal">
+      <img src="images/Founder.jpg" alt="Henry Chukwuebuka - Founder of StockedUp" />
+    </div>
+    <div class="founder-content reveal">
+      <span class="section-tag">A Message from the Founder 👋</span>
+      <h2>Hi, I'm Henry, <br>founder of <em>StockedUp.</em></h2>
+
+      <p>Today is a special day for us. We officially launched, and we've already seen our very first real customer
+        place an order. That moment reminded me why we started building StockedUp in the first place — to make buying
+        food and groceries easier, faster, and stress-free.</p>
+
+      <p>If you're downloading this app, I want you to know this:</p>
+      <p><strong>Your trust means everything to us.</strong></p>
+
+      <p>Because we are still in our early stage, our app is currently downloaded directly from our website, which is
+        why your phone may show a security prompt during installation. This is completely normal for apps not yet on the
+        Play Store.</p>
+
+      <p>We want to assure you that:</p>
+      <ul>
+        <li>We do not collect unnecessary or harmful data</li>
+        <li>Your information is safe and handled responsibly</li>
+        <li>This is our official app, built and managed by our team</li>
+      </ul>
+
+      <p>We are working towards getting StockedUp on the Play Store very soon. Thank you for believing in us this early.
+        You're not just a user—you're part of the journey.</p>
+
+      <div class="founder-signature">
+        <strong>Henry Chukwuebuka</strong>
+        <span>Founder, StockedUp Africa</span>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq">
     <div class="faq-wrap">
@@ -1732,8 +2002,8 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">Is the app available now? <span class="faq-toggle">+</span></button>
-          <div class="faq-a">Yes, the app is ready on APK file, but not on Play Store and Apple Store for public
-            download yet. Interested persons who want to use the app can go through our customer care.</div>
+          <div class="faq-a">Yes! While we prepare for our official Play Store and Apple Store launch, you can download
+            the early access Android APK directly from this page.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Who can use StockedUp? <span class="faq-toggle">+</span></button>
@@ -1770,9 +2040,26 @@
     <span class="section-tag reveal">Get early access</span>
     <h2 class="section-title reveal">We are almost<br><em>live</em></h2>
     <p class="section-body reveal">The StockedUp app is ready. While we prepare our official Play Store and Apple Store
-      releases for our public launch, you can contact customer care for early APK access for May 4th (Soft Launch).</p>
+      releases for our public launch, you can download the early access Android APK right here and start shopping today.
+    </p>
 
-    <div class="store-badges reveal" style="justify-content: center; margin-top: 2rem;">
+    <div class="store-badges reveal" style="justify-content: center; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+      <a href="https://stockedup.africa/download/StockedUp-Africa.apk" class="store-badge" id="apk-download-btn-cta"
+        download>
+        <i class="fab fa-android"></i>
+        <div class="text" style="text-align: left;">
+          <small>Get early access</small>
+          <span>Download Android</span>
+        </div>
+      </a>
+      <a href="https://whatsapp.com/channel/0029Vb6XFXT3GJOyEaxnwk1v" target="_blank" class="store-badge"
+        style="background: #25D366; border-color: #25D366; color: #fff;">
+        <i class="fab fa-whatsapp" style="font-size: 1.8rem;"></i>
+        <div class="text" style="text-align: left;">
+          <small>Updates & Bonuses</small>
+          <span>Join WhatsApp</span>
+        </div>
+      </a>
       <a href="mailto:hello@stockedup.africa" class="store-badge">
         <i class="fab fa-google-play"></i>
         <div class="text" style="text-align: left;">
@@ -1788,6 +2075,9 @@
         </div>
       </a>
     </div>
+    <p class="reveal"
+      style="text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 1.5rem;">Join our
+      WhatsApp channel for more exclusive launch updates and bonuses..</p>
   </section>
 
   <!-- FOOTER -->
@@ -1862,6 +2152,26 @@
     </div>
   </footer>
 
+  <!-- APK DOWNLOAD MODAL -->
+  <div class="apk-modal-overlay" id="apkModal">
+    <div class="apk-modal-content">
+      <button class="apk-modal-close" id="closeApkModal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="apk-modal-icon">⚠️</div>
+      <h3>Important Before You Install</h3>
+      <p>Because you are downloading from our website (not Play Store), your phone may show a warning like:</p>
+
+      <div class="highlight-box">
+        <strong>"This type of file can harm your device"</strong>
+      </div>
+
+      <p>👉 Don't worry — this is normal for all apps downloaded outside Play Store.</p>
+
+      <button class="apk-modal-btn" id="confirmApkDownload">Download anyway</button>
+    </div>
+  </div>
+
   <script>
     // Countdown Timer
     const countdownDate = new Date("May 4, 2026 00:00:00").getTime();
@@ -1901,6 +2211,48 @@
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
         if (!wasOpen) item.classList.add('open');
       });
+    });
+
+    // APK Modal Logic
+    const apkModal = document.getElementById('apkModal');
+    const closeApkModal = document.getElementById('closeApkModal');
+    const confirmApkDownload = document.getElementById('confirmApkDownload');
+    const apkUrl = "https://stockedup.africa/download/StockedUp-Africa.apk";
+
+    // Select both download buttons
+    const downloadBtns = document.querySelectorAll('#apk-download-btn-hero, #apk-download-btn-cta');
+
+    downloadBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault(); // Stop immediate download
+        apkModal.classList.add('active');
+      });
+    });
+
+    // Close modal
+    closeApkModal.addEventListener('click', () => {
+      apkModal.classList.remove('active');
+    });
+
+    // Click outside to close
+    apkModal.addEventListener('click', (e) => {
+      if (e.target === apkModal) {
+        apkModal.classList.remove('active');
+      }
+    });
+
+    // Handle actual download
+    confirmApkDownload.addEventListener('click', () => {
+      // Trigger download
+      const a = document.createElement('a');
+      a.href = apkUrl;
+      a.download = "StockedUp-Africa.apk";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      // Close modal
+      apkModal.classList.remove('active');
     });
   </script>
 </body>
