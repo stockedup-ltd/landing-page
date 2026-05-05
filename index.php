@@ -1609,8 +1609,8 @@
 
       <div class="hero-actions">
         <div class="store-badges" style="flex-wrap: wrap; gap: 1rem;">
-          <a href="https://stockedup.africa/download/StockedUp.apk" class="store-badge"
-            id="apk-download-btn-hero" download style="background: var(--terra); border-color: var(--terra); color: #fff;">
+          <a href="https://stockedup.africa/apk.php" class="store-badge" id="apk-download-btn-hero" download
+            style="background: var(--terra); border-color: var(--terra); color: #fff;">
             <i class="fab fa-android"></i>
             <div class="text">
               <small>Get early access</small>
@@ -2046,8 +2046,8 @@
     </p>
 
     <div class="store-badges reveal" style="justify-content: center; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
-      <a href="https://stockedup.africa/download/StockedUp.apk" class="store-badge" id="apk-download-btn-cta"
-        download style="background: var(--terra); border-color: var(--terra); color: #fff;">
+      <a href="https://stockedup.africa/apk.php" class="store-badge" id="apk-download-btn-cta" download
+        style="background: var(--terra); border-color: var(--terra); color: #fff;">
         <i class="fab fa-android"></i>
         <div class="text" style="text-align: left;">
           <small>Get early access</small>
@@ -2219,7 +2219,7 @@
     const apkModal = document.getElementById('apkModal');
     const closeApkModal = document.getElementById('closeApkModal');
     const confirmApkDownload = document.getElementById('confirmApkDownload');
-    const apkUrl = "https://stockedup.africa/download/StockedUp.apk";
+    const apkUrl = "https://stockedup.africa/apk.php";
 
     // Select both download buttons
     const downloadBtns = document.querySelectorAll('#apk-download-btn-hero, #apk-download-btn-cta');
