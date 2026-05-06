@@ -1990,7 +1990,7 @@
       <div class="reveal">
         <span class="section-tag">FAQ</span>
         <h2 class="section-title">Got<br>questions?<br><em>We've got<br>answers.</em></h2>
-        <p class="section-body" style="margin-top:1rem;">Everything you need to know before StockedUp goes live.</p>
+        <p class="section-body" style="margin-top:1rem;">Everything you need to know about StockedUp.</p>
         <a href="https://wa.me/2348104436235" target="_blank" class="btn-primary" style="margin-top:2rem;">Contact
           Customer Care →</a>
       </div>
