@@ -1912,7 +1912,7 @@
     </div>
     <div class="vendor-marquee-container">
       <div class="vendor-marquee-track">
-        <!-- GROUP 1: Vetted Local Partners (10 Vendors) -->
+        <!-- GROUP 1: Vetted Local Partners (12 Vendors) -->
         <div class="vendor-card">
           <div class="vendor-logo-box">
             <img src="images/faves_prime_foods.jpg" alt="Fave's Prime Foods" class="vendor-logo" />
@@ -1935,6 +1935,22 @@
           </div>
           <div class="vendor-info">
             <span class="vendor-name">Uche Agro Products</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/zikoannie_logo.jpeg" alt="Zikoannie Frozen Foods" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Zikoannie Frozen Foods</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/frozy_logo.jpeg" alt="Frozy Frozen Food Concept" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Frozy Frozen Food Concept</span>
           </div>
         </div>
         <div class="vendor-card">
@@ -1973,7 +1989,7 @@
           </div>
         </div>
 
-        <!-- GROUP 2: Duplicate 10 Vendors for Seamless Infinite Loop -->
+        <!-- GROUP 2: Duplicate 12 Vendors for Seamless Infinite Loop -->
         <div class="vendor-card">
           <div class="vendor-logo-box">
             <img src="images/faves_prime_foods.jpg" alt="Fave's Prime Foods" class="vendor-logo" />
@@ -1996,6 +2012,22 @@
           </div>
           <div class="vendor-info">
             <span class="vendor-name">Uche Agro Products</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/zikoannie_logo.jpeg" alt="Zikoannie Frozen Foods" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Zikoannie Frozen Foods</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/frozy_logo.jpeg" alt="Frozy Frozen Food Concept" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Frozy Frozen Food Concept</span>
           </div>
         </div>
         <div class="vendor-card">
