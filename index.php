@@ -1574,6 +1574,137 @@
     .apk-modal-btn:hover {
       background: #e06512;
     }
+
+    /* ── VENDOR MARQUEE ───────────────────────────────────── */
+    .vendor-marquee-section {
+      background: var(--warm);
+      padding: 3.5rem 0;
+      border-bottom: 1px solid rgba(17, 24, 39, 0.05);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .vendor-marquee-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+
+    .vendor-marquee-title h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--deep);
+      letter-spacing: -0.5px;
+    }
+
+    .vendor-marquee-title h3 span {
+      color: var(--terra);
+    }
+
+    .vendor-marquee-container {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      display: flex;
+    }
+
+    .vendor-marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 2rem;
+      animation: scroll-left-vendors 40s linear infinite;
+      padding: 0.5rem 1rem;
+    }
+
+    .vendor-marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    .vendor-card {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: linear-gradient(135deg, #ffffff 0%, var(--terra) 45%, var(--deep) 100%);
+      padding: 0.85rem 1.65rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .vendor-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(249, 115, 22, 0.3);
+      cursor: grab;
+    }
+
+    .vendor-card:active {
+      cursor: grabbing;
+    }
+
+    .vendor-icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(249, 115, 22, 0.08);
+      color: var(--terra);
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+
+    .vendor-logo-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .vendor-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .vendor-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vendor-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .vendor-loc {
+      font-size: 0.72rem;
+      color: var(--mid);
+      margin-top: 1px;
+      font-weight: 400;
+    }
+
+    @keyframes scroll-left-vendors {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-50% - 1rem));
+      }
+    }
   </style>
 </head>
 
@@ -1645,8 +1776,9 @@
       </div>
 
       <div class="hero-stats">
-        <div class="stat-item"><span class="num">500+</span><span class="label">Early signups</span></div>
-        <div class="stat-item"><span class="num">10+</span><span class="label">Trusted vendors</span></div>
+        <div class="stat-item"><span class="num">100+</span><span class="label">Early signups</span></div>
+        <div class="stat-item"><span class="num">16+</span><span class="label">Trusted vendors</span></div>
+        <div class="stat-item"><span class="num">40+</span><span class="label">Products sold</span></div>
         <div class="stat-item"><span class="num">1hr</span><span class="label">Avg delivery</span></div>
       </div>
     </div>
@@ -1692,6 +1824,7 @@
       <span>Doorstep Delivery</span><span class="dot-sep">◆</span>
     </div>
   </div>
+
 
   <!-- ABOUT -->
   <section id="about" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
@@ -1768,6 +1901,138 @@
         <div class="offer-icon">📊</div>
         <h4>Customer Dashboard</h4>
         <p>Manage orders, track deliveries, view history and redeem loyalty points in one place.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENDOR MARQUEE -->
+  <section class="vendor-marquee-section">
+    <div class="vendor-marquee-title reveal">
+      <h3>Our <span>Vendor Partners</span></h3>
+    </div>
+    <div class="vendor-marquee-container">
+      <div class="vendor-marquee-track">
+        <!-- GROUP 1: Vetted Local Partners (10 Vendors) -->
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/faves_prime_foods.jpg" alt="Fave's Prime Foods" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Fave's Prime Foods</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/jl_food_mart.jpg" alt="JL Food Mart" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">JL Food Mart</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/uche_agro_products.jpg" alt="Uche Agro Products" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Uche Agro Products</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Bright Foodstore</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">De'lights Kilishi and Kuli Kuli</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Funmi stores</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Goody Seafood</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">ifyben Groceries Entreprise</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Marvin Grocery</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Mummy Purity Ukwa Store</span>
+          </div>
+        </div>
+
+        <!-- GROUP 2: Duplicate 10 Vendors for Seamless Infinite Loop -->
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/faves_prime_foods.jpg" alt="Fave's Prime Foods" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Fave's Prime Foods</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/jl_food_mart.jpg" alt="JL Food Mart" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">JL Food Mart</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-box">
+            <img src="images/uche_agro_products.jpg" alt="Uche Agro Products" class="vendor-logo" />
+          </div>
+          <div class="vendor-info">
+            <span class="vendor-name">Uche Agro Products</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Bright Foodstore</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">De'lights Kilishi and Kuli Kuli</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Funmi stores</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Goody Seafood</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">ifyben Groceries Entreprise</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Marvin Grocery</span>
+          </div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-info">
+            <span class="vendor-name">Mummy Purity Ukwa Store</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
