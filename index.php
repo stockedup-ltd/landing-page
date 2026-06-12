@@ -1462,118 +1462,7 @@
       }
     }
 
-    /* ── MODAL ───────────────────────────────────────────── */
-    .apk-modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(17, 24, 39, 0.7);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
 
-    .apk-modal-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .apk-modal-content {
-      background: #fff;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 24px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      position: relative;
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .apk-modal-overlay.active .apk-modal-content {
-      transform: translateY(0);
-    }
-
-    .apk-modal-close {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(17, 24, 39, 0.05);
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--mid);
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .apk-modal-close:hover {
-      background: rgba(17, 24, 39, 0.1);
-      color: var(--deep);
-    }
-
-    .apk-modal-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .apk-modal-content h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--deep);
-      margin-bottom: 1rem;
-    }
-
-    .apk-modal-content p {
-      font-size: 0.95rem;
-      color: var(--mid);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .apk-modal-content .highlight-box {
-      background: rgba(249, 115, 22, 0.08);
-      border-left: 3px solid var(--terra);
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: left;
-      margin: 1.5rem 0;
-      font-size: 0.85rem;
-      color: var(--deep);
-    }
-
-    .apk-modal-btn {
-      display: inline-block;
-      width: 100%;
-      background: var(--terra);
-      color: #fff;
-      padding: 1rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      margin-top: 1rem;
-      transition: background 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .apk-modal-btn:hover {
-      background: #e06512;
-    }
 
     /* ── VENDOR MARQUEE ───────────────────────────────────── */
     .vendor-marquee-section {
@@ -1728,8 +1617,7 @@
     <div class="hero-bg-circle c1"></div>
     <div class="hero-bg-circle c2"></div>
     <div class="hero-content reveal">
-      <div class="hero-tag"><span class="dot"></span> Soft Launching in <span id="timer"
-          style="font-weight: 700; color: var(--terra);">00d 00h 00m 00s</span></div>
+      <div class="hero-tag"><span class="dot"></span> We are live on <span style="font-weight: 700; color: var(--terra); margin-left: 4px;">Google Play!</span></div>
       <h1 class="hero-title">
         Your market,<br>
         <em>delivered</em><br>
@@ -1740,12 +1628,12 @@
 
       <div class="hero-actions">
         <div class="store-badges" style="flex-wrap: wrap; gap: 1rem;">
-          <a href="https://stockedup.africa/apk.php" class="store-badge" id="apk-download-btn-hero" download
-            style="background: var(--terra); border-color: var(--terra); color: #fff;">
-            <i class="fab fa-android"></i>
+          <a href="https://play.google.com/store/apps/details?id=com.africa.stockedup" target="_blank" class="store-badge"
+            style="background: #000000; border-color: #000000; color: #fff;">
+            <i class="fab fa-google-play"></i>
             <div class="text">
-              <small>Get early access</small>
-              <span>Download Android</span>
+              <small>Get it on</small>
+              <span>Google Play</span>
             </div>
           </a>
           <a href="https://whatsapp.com/channel/0029Vb6XFXT3GJOyEaxnwk1v" target="_blank" class="store-badge"
@@ -1754,13 +1642,6 @@
             <div class="text">
               <small>Updates & Bonuses</small>
               <span>Join WhatsApp</span>
-            </div>
-          </a>
-          <a href="#cta" class="store-badge">
-            <i class="fab fa-google-play"></i>
-            <div class="text">
-              <small>Coming soon to</small>
-              <span>Play Store</span>
             </div>
           </a>
           <a href="#cta" class="store-badge">
@@ -2301,8 +2182,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">Is the app available now? <span class="faq-toggle">+</span></button>
-          <div class="faq-a">Yes! While we prepare for our official Play Store and Apple Store launch, you can download
-            the early access Android APK directly from this page.</div>
+          <div class="faq-a">Yes! The StockedUp app is officially live and available for download on the Google Play Store. We are also preparing our official Apple App Store release for iOS users.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Who can use StockedUp? <span class="faq-toggle">+</span></button>
@@ -2336,19 +2216,18 @@
   <!-- CTA BAND -->
   <section id="cta">
     <div class="cta-deco"></div>
-    <span class="section-tag reveal">Get early access</span>
+    <span class="section-tag reveal">Download the app</span>
     <h2 class="section-title reveal">We are<br><em>live</em></h2>
-    <p class="section-body reveal">The StockedUp app is ready. While we prepare our official Play Store and Apple Store
-      releases for our public launch, you can download the early access Android APK right here and start shopping today.
+    <p class="section-body reveal">The StockedUp app is ready. Start shopping today by downloading the app directly from the Google Play Store. iOS version is coming soon!
     </p>
 
     <div class="store-badges reveal" style="justify-content: center; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
-      <a href="https://stockedup.africa/apk.php" class="store-badge" id="apk-download-btn-cta" download
-        style="background: var(--terra); border-color: var(--terra); color: #fff;">
-        <i class="fab fa-android"></i>
+      <a href="https://play.google.com/store/apps/details?id=com.africa.stockedup" target="_blank" class="store-badge"
+        style="background: #000000; border-color: #000000; color: #fff;">
+        <i class="fab fa-google-play"></i>
         <div class="text" style="text-align: left;">
-          <small>Get early access</small>
-          <span>Download Android</span>
+          <small>Get it on</small>
+          <span>Google Play</span>
         </div>
       </a>
       <a href="https://whatsapp.com/channel/0029Vb6XFXT3GJOyEaxnwk1v" target="_blank" class="store-badge"
@@ -2357,13 +2236,6 @@
         <div class="text" style="text-align: left;">
           <small>Updates & Bonuses</small>
           <span>Join WhatsApp</span>
-        </div>
-      </a>
-      <a href="mailto:hello@stockedup.africa" class="store-badge">
-        <i class="fab fa-google-play"></i>
-        <div class="text" style="text-align: left;">
-          <small>Coming soon to</small>
-          <span>Play Store</span>
         </div>
       </a>
       <a href="mailto:hello@stockedup.africa" class="store-badge">
@@ -2451,51 +2323,9 @@
     </div>
   </footer>
 
-  <!-- APK DOWNLOAD MODAL -->
-  <div class="apk-modal-overlay" id="apkModal">
-    <div class="apk-modal-content">
-      <button class="apk-modal-close" id="closeApkModal">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="apk-modal-icon">⚠️</div>
-      <h3>Important Before You Install</h3>
-      <p>Because you are downloading from our website (not Play Store), your phone may show a warning like:</p>
 
-      <div class="highlight-box">
-        <strong>"This type of file can harm your device"</strong>
-      </div>
-
-      <p>👉 Don't worry — this is normal for all apps downloaded outside Play Store.</p>
-
-      <button class="apk-modal-btn" id="confirmApkDownload">Download anyway</button>
-    </div>
-  </div>
 
   <script>
-    // Countdown Timer
-    const countdownDate = new Date("May 4, 2026 00:00:00").getTime();
-    const timerElement = document.getElementById("timer");
-
-    function updateTimer() {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      if (distance < 0) {
-        timerElement.innerHTML = "LIVE NOW!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
-
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -2510,48 +2340,6 @@
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
         if (!wasOpen) item.classList.add('open');
       });
-    });
-
-    // APK Modal Logic
-    const apkModal = document.getElementById('apkModal');
-    const closeApkModal = document.getElementById('closeApkModal');
-    const confirmApkDownload = document.getElementById('confirmApkDownload');
-    const apkUrl = "https://stockedup.africa/apk.php";
-
-    // Select both download buttons
-    const downloadBtns = document.querySelectorAll('#apk-download-btn-hero, #apk-download-btn-cta');
-
-    downloadBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault(); // Stop immediate download
-        apkModal.classList.add('active');
-      });
-    });
-
-    // Close modal
-    closeApkModal.addEventListener('click', () => {
-      apkModal.classList.remove('active');
-    });
-
-    // Click outside to close
-    apkModal.addEventListener('click', (e) => {
-      if (e.target === apkModal) {
-        apkModal.classList.remove('active');
-      }
-    });
-
-    // Handle actual download
-    confirmApkDownload.addEventListener('click', () => {
-      // Trigger download
-      const a = document.createElement('a');
-      a.href = apkUrl;
-      a.download = "StockedUp.apk";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-
-      // Close modal
-      apkModal.classList.remove('active');
     });
   </script>
 </body>
